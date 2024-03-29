@@ -11,6 +11,9 @@ def verify_iam_role_policy(file_path):
             # Check if 'Resource' is a string and equals "*"
             if isinstance(statement.get("Resource"), str) and statement.get("Resource") == "*":
                 return False
+            # Check if 'Resource' is a list and contains "*"
+            elif isinstance(statement.get("Resource"), list) and "*" in statement.get("Resource"):
+                return False
 
         return True
 
