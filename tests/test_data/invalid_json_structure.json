@@ -1,0 +1,20 @@
+
+"PolicyName": "root",
+"Field3": "Value3",
+"PolicyDocument": {
+    "Version": "2012-10-17",
+    "Field2": "Value2",
+    "Statement": [
+        {
+            "Sid": "IamListAccess",
+            "Field5": "Value5",
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListRoles",
+                "iam:ListUsers",
+                "Value4"
+            ],
+            "Resource": "*",
+            "Field1": "Value1"
+        }
+}
