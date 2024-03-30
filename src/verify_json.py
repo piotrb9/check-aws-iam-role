@@ -22,3 +22,6 @@ def verify_iam_role_policy(file_path):
     except FileNotFoundError:
         print("File not found.")
         return True
+    except TypeError:
+        print("Error in the JSON structure.")
+        return True
