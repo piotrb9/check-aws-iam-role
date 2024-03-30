@@ -25,3 +25,6 @@ def verify_iam_role_policy(file_path):
     except TypeError:
         print("Error in the JSON structure.")
         return True
+    except AttributeError:
+        print("Missing JSON fields.")
+        return True
