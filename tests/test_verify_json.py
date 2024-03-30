@@ -12,3 +12,7 @@ class TestVerifyIAMRolePolicy(unittest.TestCase):
 
     def test_no_asterisk(self):
         self.assertTrue(verify_iam_role_policy("test_data/no_asterisk.json"))
+
+    def test_no_resource_field(self):
+        self.assertTrue(verify_iam_role_policy("test_data/no_resource_field.json"))
+
