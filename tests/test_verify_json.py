@@ -43,3 +43,6 @@ class TestVerifyIAMRolePolicy(unittest.TestCase):
     def test_invalid_json_structure(self):
         self.assertTrue(verify_iam_role_policy("test_data/invalid_json_structure.json"))
 
+    def test_valid_single_list_resource_field(self):
+        self.assertFalse(verify_iam_role_policy("test_data/valid_single_list_resource_field.json"))
+
