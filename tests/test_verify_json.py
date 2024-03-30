@@ -31,3 +31,6 @@ class TestVerifyIAMRolePolicy(unittest.TestCase):
     def test_no_policy_document_field(self):
         self.assertTrue(verify_iam_role_policy("test_data/no_policy_document_field.json"))
 
+    def test_number_resource_field(self):
+        self.assertTrue(verify_iam_role_policy("test_data/number_resource_field.json"))
+
