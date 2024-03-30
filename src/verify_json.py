@@ -1,4 +1,5 @@
 import json
+import sys
 
 
 def verify_iam_role_policy(file_path):
@@ -28,3 +29,11 @@ def verify_iam_role_policy(file_path):
     except AttributeError:
         print("Missing JSON fields.")
         return True
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python verify_json.py <file_path>")
+        sys.exit(1)
+    print(verify_iam_role_policy(sys.argv[1]))
+    sys.exit(0)
