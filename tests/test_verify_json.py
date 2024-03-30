@@ -9,3 +9,6 @@ class TestVerifyIAMRolePolicy(unittest.TestCase):
 
     def test_empty_file(self):
         self.assertTrue(verify_iam_role_policy("test_data/empty_file.json"))
+
+    def test_no_asterisk(self):
+        self.assertTrue(verify_iam_role_policy("test_data/no_asterisk.json"))
