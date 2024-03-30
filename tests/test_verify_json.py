@@ -46,3 +46,6 @@ class TestVerifyIAMRolePolicy(unittest.TestCase):
     def test_valid_single_list_resource_field(self):
         self.assertFalse(verify_iam_role_policy("test_data/valid_single_list_resource_field.json"))
 
+
+if __name__ == '__main__':
+    unittest.main()
