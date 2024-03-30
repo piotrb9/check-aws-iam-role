@@ -10,7 +10,7 @@ This project includes a Python script for validating AWS IAM role policies. It c
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/piotrb9/check-aws-iam-role.git
+git clone https://github.com/piotrb9/check-aws-iam-role.git check_aws_iam_role
 ```
 ```bash
 cd check_aws_iam_role
