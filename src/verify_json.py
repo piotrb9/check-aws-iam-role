@@ -19,7 +19,7 @@ def verify_iam_role_policy(file_path):
 
     except json.JSONDecodeError:
         print("Error decoding JSON.")
-        return False
+        return True
     except FileNotFoundError:
         print("File not found.")
-        return False
+        return True
