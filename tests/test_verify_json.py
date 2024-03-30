@@ -22,3 +22,6 @@ class TestVerifyIAMRolePolicy(unittest.TestCase):
     def test_no_statement_field(self):
         self.assertTrue(verify_iam_role_policy("test_data/no_statement_field.json"))
 
+    def test_valid_policy_extra_fields(self):
+        self.assertFalse(verify_iam_role_policy("test_data/valid_role_policy_extra_fields.json"))
+
